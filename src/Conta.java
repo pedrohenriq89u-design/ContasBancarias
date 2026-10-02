@@ -12,22 +12,19 @@ public abstract class Conta {
     }
 
     public void depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-        } else {
-            IO.println("Seu depósito de : " + valor + " foi realizado.");
-        }
-    }
-
-    public void sacar(double valor) {
-        if (valor > 0 && valor <= saldo) {
-            saldo -= valor;
-            IO.println("Seu saque de : " +valor + " foi realizado");
+        if (valor > 0){
+            saldo +=valor;
         }else {
-            IO.println("Saque não realizado por saldo insuficiente");
+            IO.println("Seu Deposito de :" + valor + "foi realizado");
         }
     }
-    public void exibirSaldo() {
-        IO.println("Saldo: " + saldo);
+    public void sacar(double valor){
+        if (valor > 0 && valor <= saldo) {
+        }else{
+            IO.println("Saque não efetuado");
+        }
+    }
+    public void exibirsaldo(){
+
     }
 }
